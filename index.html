@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Márcio Gabriel | Desenvolvedor Full Stack em Formação</title>
+  <meta name="description" content="Portfólio de Márcio Gabriel, desenvolvedor Full Stack em formação. Projetos em HTML, CSS, JavaScript, Java e Spring Boot." />
+  <meta name="keywords" content="desenvolvedor, full stack, portfolio, java, spring boot, javascript, html, css" />
+  <meta name="author" content="Márcio Gabriel" />
+
+  <!-- Open Graph / SEO básico -->
+  <meta property="og:title" content="Márcio Gabriel | Desenvolvedor Full Stack" />
+  <meta property="og:description" content="Construindo sites modernos e aplicações web Full Stack." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <div class="loader-logo">MG</div>
+      <div class="loader-bar"><span></span></div>
+      <p class="loader-text">Carregando experiência...</p>
+    </div>
+  </div>
+
+  <!-- ===================== CURSOR PERSONALIZADO ===================== -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- ===================== PARTÍCULAS DE FUNDO ===================== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-mark">MG</span>
+        <span class="logo-name">Márcio Gabriel</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#tecnologias" class="nav-link">Tecnologias</a>
+        <a href="#experiencia" class="nav-link">Experiência</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar modo claro/escuro">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="#contato" class="btn btn-primary nav-cta">Entrar em contato</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#sobre" class="mobile-link">Sobre</a>
+      <a href="#projetos" class="mobile-link">Projetos</a>
+      <a href="#tecnologias" class="mobile-link">Tecnologias</a>
+      <a href="#experiencia" class="mobile-link">Experiência</a>
+      <a href="#contato" class="mobile-link">Contato</a>
+      <a href="#contato" class="btn btn-primary">Entrar em contato</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+
+      <div class="hero-container">
+        <div class="hero-text" data-reveal="slide-right">
+          <p class="hero-eyebrow"><span class="dot"></span> Disponível para novas oportunidades</p>
+          <h1 class="hero-title">
+            Olá, <br />
+            Eu sou <span class="gradient-text">Márcio Gabriel</span>
+          </h1>
+          <h2 class="hero-subtitle">Desenvolvedor Front-end e Back-end em formação.</h2>
+          <p class="hero-description">
+            Construo sites modernos, responsivos e aplicações web utilizando
+            <span class="highlight">HTML</span>, <span class="highlight">CSS</span>,
+            <span class="highlight">JavaScript</span> e <span class="highlight">Java</span>.
+          </p>
+
+          <div class="typing-wrapper">
+            <span class="typing-prefix">&lt;/&gt;</span>
+            <span id="typing-text"></span><span class="typing-cursor">|</span>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projetos" class="btn btn-primary">
+              <i class="fa-solid fa-diagram-project"></i> Ver Projetos
+            </a>
+            <a href="#contato" class="btn btn-outline">
+              <i class="fa-regular fa-paper-plane"></i> Contato
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper" data-reveal="zoom">
+          <div class="hero-image-glass">
+            <img src="https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=900&auto=format&fit=crop" alt="Ilustração de um desenvolvedor programando" class="hero-image" />
+            <div class="floating-card card-1"><i class="fa-brands fa-html5"></i> HTML5</div>
+            <div class="floating-card card-2"><i class="fa-brands fa-java"></i> Java</div>
+            <div class="floating-card card-3"><i class="fa-brands fa-js"></i> JavaScript</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#sobre" class="scroll-indicator" aria-label="Rolar para baixo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===================== SOBRE MIM ===================== -->
+    <section id="sobre" class="section about">
+      <div class="section-header" data-reveal="fade-in">
+        <p class="section-eyebrow">Sobre mim</p>
+        <h2 class="section-title">Minha trajetória até aqui</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image" data-reveal="slide-right">
+          <div class="about-image-glass">
+            <img src="img\Mg.jpg" alt="Desenvolvedor estudando código em um notebook" />
+          </div>
+        </div>
+
+        <div class="about-content" data-reveal="slide-left">
+          <p class="about-text">
+            Sou um desenvolvedor <strong>em formação</strong>, mergulhado no estudo de
+            <strong>HTML, CSS, JavaScript e Java</strong>, e atualmente aprendendo
+            <strong>Spring Boot</strong> para construir aplicações back-end robustas.
+          </p>
+          <p class="about-text">
+            Estou criando projetos reais para montar meu portfólio, incluindo um
+            site de barbearia com sistema de agendamento e um e-commerce fictício,
+            sempre buscando aplicar boas práticas e um código limpo.
+          </p>
+          <p class="about-text">
+            Meu objetivo é conquistar minha <strong>primeira oportunidade</strong> como
+            desenvolvedor, com interesse genuíno em atuar tanto no
+            <strong>Front-end</strong> quanto no <strong>Back-end</strong> — caminhando
+            para me tornar um desenvolvedor <span class="gradient-text">Full Stack</span>.
+          </p>
+
+          <ul class="about-list">
+            <li><i class="fa-solid fa-check"></i> Estudando HTML, CSS, JavaScript e Java</li>
+            <li><i class="fa-solid fa-check"></i> Aprendendo Spring Boot para Back-end</li>
+            <li><i class="fa-solid fa-check"></i> Criando projetos para montar meu portfólio</li>
+            <li><i class="fa-solid fa-check"></i> Desenvolvendo site de barbearia com agendamento</li>
+            <li><i class="fa-solid fa-check"></i> Desenvolvendo um e-commerce fictício</li>
+            <li><i class="fa-solid fa-check"></i> Buscando minha primeira oportunidade como dev</li>
+          </ul>
+        </div>
+      </div>
+
+    
+    </section>
+
+    <!-- ===================== TECNOLOGIAS ===================== -->
+    <section id="tecnologias" class="section tech">
+      <div class="section-header" data-reveal="fade-in">
+        <p class="section-eyebrow">Habilidades</p>
+        <h2 class="section-title">Tecnologias que utilizo</h2>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card" data-reveal="scale" data-level="80">
+          <i class="fa-brands fa-html5 tech-icon" style="color:#E34F26"></i>
+          <h3>HTML</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">80%</span>
+        </div>
+
+        <div class="tech-card" data-reveal="scale" data-level="75">
+          <i class="fa-brands fa-css3-alt tech-icon" style="color:#3B82F6"></i>
+          <h3>CSS</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">75%</span>
+        </div>
+
+        <div class="tech-card" data-reveal="scale" data-level="65">
+          <i class="fa-brands fa-js tech-icon" style="color:#F7DF1E"></i>
+          <h3>JavaScript</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">65%</span>
+        </div>
+
+        <div class="tech-card" data-reveal="scale" data-level="60">
+          <i class="fa-brands fa-java tech-icon" style="color:#EA2D2E"></i>
+          <h3>Java</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">60%</span>
+        </div>
+
+        <div class="tech-card" data-reveal="scale" data-level="35">
+          <i class="fa-solid fa-leaf tech-icon" style="color:#6DB33F"></i>
+          <h3>Spring Boot</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">35%</span>
+        </div>
+
+        <div class="tech-card" data-reveal="scale" data-level="45">
+          <i class="fa-solid fa-database tech-icon" style="color:#7C3AED"></i>
+          <h3>MySQL</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">45%</span>
+        </div>
+
+        <div class="tech-card" data-reveal="scale" data-level="60">
+          <i class="fa-brands fa-git-alt tech-icon" style="color:#F05032"></i>
+          <h3>Git</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">60%</span>
+        </div>
+
+        <div class="tech-card" data-reveal="scale" data-level="65">
+          <i class="fa-brands fa-github tech-icon" style="color:#ffffff"></i>
+          <h3>GitHub</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">65%</span>
+        </div>
+
+        <div class="tech-card" data-reveal="scale" data-level="90">
+          <i class="fa-solid fa-code tech-icon" style="color:#3B82F6"></i>
+          <h3>VS Code</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">90%</span>
+        </div>
+
+        <div class="tech-card" data-reveal="scale" data-level="75">
+          <i class="fa-solid fa-feather-pointed tech-icon" style="color:#7C3AED"></i>
+          <h3>IntelliJ IDEA</h3>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="progress-percent">75%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJETOS ===================== -->
+    <section id="projetos" class="section projects">
+      <div class="section-header" data-reveal="fade-in">
+        <p class="section-eyebrow">Portfólio</p>
+        <h2 class="section-title">Projetos</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-reveal="slide-right">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=800&auto=format&fit=crop" alt="Tela de uma landing page para barbearia" />
+            <div class="project-overlay">
+              <a href="#" class="icon-btn" aria-label="Ver projeto"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" class="icon-btn" aria-label="Repositório no GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Landing Page Barbearia</h3>
+            <p>Site moderno para uma barbearia com sistema de agendamento online.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-small btn-outline">Ver Projeto</a>
+              <a href="#" class="btn btn-small btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal="fade-in">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop" alt="Tela de um sistema de agendamento" />
+            <div class="project-overlay">
+              <a href="#" class="icon-btn" aria-label="Ver projeto"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" class="icon-btn" aria-label="Repositório no GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Sistema de Agendamento</h3>
+            <p>Sistema Full Stack utilizando Java, Spring Boot e MySQL para gerenciamento de horários de clientes.</p>
+            <div class="project-tags">
+              <span>Java</span><span>Spring Boot</span><span>MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-small btn-outline">Ver Projeto</a>
+              <a href="#" class="btn btn-small btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal="slide-left">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" alt="Tela de uma loja virtual e-commerce" />
+            <div class="project-overlay">
+              <a href="#" class="icon-btn" aria-label="Ver projeto"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" class="icon-btn" aria-label="Repositório no GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>E-commerce</h3>
+            <p>Loja virtual fictícia criada para meu portfólio, com catálogo de produtos, carrinho de compras e layout responsivo.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-small btn-outline">Ver Projeto</a>
+              <a href="#" class="btn btn-small btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card-soon" data-reveal="zoom">
+          <div class="shine"></div>
+          <i class="fa-solid fa-rocket soon-icon"></i>
+          <h3>Em desenvolvimento</h3>
+          <p>Novo projeto chegando...</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIÊNCIA ===================== -->
+    <section id="experiencia" class="section experience">
+      <div class="section-header" data-reveal="fade-in">
+        <p class="section-eyebrow">Jornada</p>
+        <h2 class="section-title">Experiência</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item" data-reveal="slide-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2025</span>
+            <h3>Início dos estudos</h3>
+            <p>Início dos estudos em Desenvolvimento Web.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal="slide-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2026</span>
+            <h3>Primeiros projetos</h3>
+            <p>Criação dos primeiros projetos completos.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal="slide-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2026</span>
+            <h3>Full Stack</h3>
+            <p>Desenvolvimento Full Stack com Java e Spring Boot.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-goal" data-reveal="zoom">
+          <div class="timeline-dot"><i class="fa-solid fa-flag"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-year">Objetivo atual</span>
+            <h3>Primeira oportunidade</h3>
+            <p>Conquistar minha primeira oportunidade profissional como Desenvolvedor Full Stack.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section id="contato" class="section contact">
+      <div class="section-header" data-reveal="fade-in">
+        <p class="section-eyebrow">Vamos conversar</p>
+        <h2 class="section-title">Contato</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-reveal="slide-right">
+          <p class="contact-lead">
+            Estou em busca da minha primeira oportunidade como desenvolvedor.
+            Se você tem um projeto, vaga ou apenas quer trocar uma ideia sobre tecnologia,
+            ficarei feliz em conversar.
+          </p>
+
+          <div class="contact-channels">
+            <a href="mailto:seuemail@exemplo.com" class="contact-channel">
+              <i class="fa-solid fa-envelope"></i>
+              <div><span>Email</span><p>seuemail@exemplo.com</p></div>
+            </a>
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="contact-channel">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div><span>WhatsApp</span><p>Vamos conversar</p></div>
+            </a>
+            <a href="#" target="_blank" rel="noopener" class="contact-channel">
+              <i class="fa-brands fa-linkedin"></i>
+              <div><span>LinkedIn</span><p>/in/marciogabriel</p></div>
+            </a>
+            <a href="#" target="_blank" rel="noopener" class="contact-channel">
+              <i class="fa-brands fa-github"></i>
+              <div><span>GitHub</span><p>/marciogabriel</p></div>
+            </a>
+            <a href="#" target="_blank" rel="noopener" class="contact-channel">
+              <i class="fa-brands fa-instagram"></i>
+              <div><span>Instagram</span><p>@mgabriel_oliveira.s</p></div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-reveal="slide-left">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder=" " />
+            <label for="name">Nome</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder=" " />
+            <label for="email">Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Mensagem</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>Enviar Mensagem</span> <i class="fa-regular fa-paper-plane"></i>
+          </button>
+          <p class="form-feedback" id="form-feedback"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <a href="#home" class="logo footer-logo">
+        <span class="logo-mark">MG</span>
+        <span class="logo-name">Márcio Gabriel</span>
+      </a>
+      <div class="footer-socials">
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:seuemail@exemplo.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/5500000000000" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <p class="footer-text">&copy; 2026 Márcio Gabriel.<br />Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== BOTÃO VOLTAR AO TOPO ===================== -->
+  <button id="back-to-top" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
